@@ -122,7 +122,7 @@ export default function App() {
     <header className="topbar">
       <time className="clock">{clock}</time>
       <div style={{display:'flex',alignItems:'center',gap:12}}>
-        <LiveUsers />
+        {/* <LiveUsers /> */}
         <div className="links"><a className="chip" href="https://open.spotify.com/playlist/7DDMXrDijZD95GlYRnL7Zg" target="_blank" rel="noreferrer">Spotify</a></div>
       </div>
     </header>
