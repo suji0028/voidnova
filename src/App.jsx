@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { gsap } from 'gsap';
+import LiveUsers from './LiveUsers';
 
 const assets = import.meta.glob('../assets/**/*.{opus,mp4,jpg}', {
   eager: true,
@@ -16,9 +17,9 @@ const quotes = [
   "It's not the plane, it's the pilot",
   "लबों से नहीं, दिल से सुनो",
   "There is no courage without fear",
-  "मोहब्बत एक खूबसूरत एहसास है",
+  "क्यों जुड़ता इस जहाँ से तू इक दिन यह गुज़र ही जायेगा",
   "Blink of an Eye",
-  "कुछ रिश्ते हमेशा साथ रहते हैं",
+  "कितना भी समेट ले यहाँ मुट्ठी से फिसल ही जायेगा",
   "The way to get started is to quit talking and begin doing",
   "खुद को ढूँढना भी एक सफ़र है",
   "Success isn't always about greatness. It's about consistency. Consistent hard work leads to success",
@@ -118,7 +119,13 @@ export default function App() {
   return <main className="scene">
     <video className="background-video" autoPlay muted loop playsInline aria-hidden="true"><source src={asset('void.mp4')} type="video/mp4" /></video>
     <div className="sky" /><div className="grain" /><div className="vignette" />
-    <header className="topbar"><time className="clock">{clock}</time><div className="links"><a className="chip" href="https://open.spotify.com/playlist/7DDMXrDijZD95GlYRnL7Zg" target="_blank" rel="noreferrer">Spotify</a></div></header>
+    <header className="topbar">
+      <time className="clock">{clock}</time>
+      <div style={{display:'flex',alignItems:'center',gap:12}}>
+        <LiveUsers />
+        <div className="links"><a className="chip" href="https://open.spotify.com/playlist/7DDMXrDijZD95GlYRnL7Zg" target="_blank" rel="noreferrer">Spotify</a></div>
+      </div>
+    </header>
     <section className="signage"><h1>Void Nova</h1><p><TypeAnimation key={quote} sequence={[quote]} speed={55} cursor={false} wrapper="span" /></p></section>
     <section className="player-wrap"><div className={`player${playing ? ' is-playing' : ''}`}>
       <div className="art">{song.artwork ? <img src={song.artwork} alt={`${song.title} album artwork`} /> : <VinylArt color={song.color} />}</div>
