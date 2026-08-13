@@ -2,11 +2,17 @@ node_modules/
 dist/
 .vite/
 
-# Environment files
+
+# Environment files — DO NOT commit secrets
 .env
+.env.local
 .env.*
+.env.*.local
 !.env.example
 *.local
+
+# Vercel
+.vercel/
 
 # Logs
 npm-debug.log*
@@ -22,3 +28,8 @@ coverage/
 Thumbs.db
 .vscode/
 .idea/
+
+# Custom skills & agent docs
+skills.md
+skills/
+.agents/

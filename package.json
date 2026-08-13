@@ -10,6 +10,7 @@
     "presence-server": "node server/presence-server.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
     "@vitejs/plugin-react": "latest",
     "gsap": "^3.15.0",
     "react": "latest",
