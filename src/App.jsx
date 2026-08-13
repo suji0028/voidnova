@@ -16,7 +16,7 @@ const hollywoodBackground = new URL('../assets/backgrounds/hollywood.png', impor
 const PLAYLISTS = [
   { id: 'emraan', name: 'Emraan Hashmi', youtubePlaylistId: 'PLTV9wb1Wz6O0', background: emraanBackground },
   { id: 'hrithik', name: 'Hrithik Roshan', youtubePlaylistId: 'PLdZ9AKDEcqfU', background: hrithikBackground },
-  { id: 'hollywood', name: 'Lo-Fi Nights', youtubePlaylistId: 'PLTV9wb1Wz6O0', background: hollywoodBackground }
+  { id: 'hollywood', name: 'Lo-Fi Nights', youtubePlaylistId: 'PL0htMPdbfII_oBrA3YPAa2Pm2CJhNv-pY', background: hollywoodBackground }
 ];
 
 const normalizePlaylistId = (value) => {
