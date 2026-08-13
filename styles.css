@@ -456,6 +456,10 @@ body{
   line-height: 1;
 }
 
+.playlist-background[data-playlist="hrithik"] {
+  background-position: 80% center;
+}
+
 /* ─── Responsive: Laptop ≤ 1199px ─── */
 @media (max-width: 1199px) {
   .signage{
@@ -468,9 +472,20 @@ body{
 
 /* ─── Responsive: Tablet ≤ 768px ─── */
 @media (max-width: 768px) {
-  .background-video, .playlist-background{
+  .background-video{
     object-position: center 25%;
+  }
+  .playlist-background{
     background-position: center 25%;
+  }
+  .playlist-background[data-playlist="hrithik"]{
+    background-position: 78% 30%;
+  }
+  .playlist-background[data-playlist="emraan"]{
+    background-position: 48% 25%;
+  }
+  .playlist-background[data-playlist="hollywood"]{
+    background-position: 50% 50%;
   }
 
   .signage{
@@ -507,6 +522,13 @@ body{
 
 /* ─── Responsive: Phone ≤ 480px ─── */
 @media (max-width: 480px) {
+  .playlist-background[data-playlist="hrithik"]{
+    background-position: 82% 25%;
+  }
+  .playlist-background[data-playlist="emraan"]{
+    background-position: 45% 20%;
+  }
+
   .signage{
     top: 11%;
     width: 92vw;

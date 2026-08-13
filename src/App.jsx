@@ -465,7 +465,7 @@ export default function App() {
 
   return (
     <main className="scene" ref={sceneRef}>
-      <div className="playlist-background" style={{ backgroundImage: `url(${activePlaylist.background})` }} />
+      <div className="playlist-background" data-playlist={activePlaylist.id} style={{ backgroundImage: `url(${activePlaylist.background})` }} />
 
       <div className="sky" /><div className="grain" /><div className="vignette" />
       <div ref={youtubeContainerRef} className="youtube-player" aria-hidden="true" />
